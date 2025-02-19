@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Loader } from "./Loader";
 import { urlFor } from "@/sanity/lib/image";
 import { BookOpen } from "lucide-react";
+import { CourseProgress } from "./CourseProgress";
 
 interface CourseCardProps {
   course: GetCoursesQueryResult[number];
@@ -57,7 +58,7 @@ function CourseCard({ course, progress, href }: CourseCardProps) {
             {course.description}
           </p>
           <div className="space-y-4 mt-auto">
-          {course.instructor && (
+            {course.instructor && (
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   {course.instructor.photo ? (
@@ -81,14 +82,14 @@ function CourseCard({ course, progress, href }: CourseCardProps) {
                 <BookOpen className="h-4 w-4 text-muted-foreground" />
               </div>
             )}
-          {/* {typeof progress === "number" && (
+            {typeof progress === "number" && (
               <CourseProgress
                 progress={progress}
                 variant="default"
                 size="sm"
                 label="Course Progress"
               />
-            )} */}
+            )}
           </div>
         </div>
       </div>
