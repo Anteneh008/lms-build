@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typegen" : "sanity schema extract && sanity typegen generate"
+    "typegen": "sanity schema extract && sanity typegen generate"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.11.2",
@@ -17,6 +17,7 @@
     "@sanity/vision": "^3.75.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "groq": "^3.75.1",
     "lucide-react": "^0.475.0",
     "next": "15.1.7",
     "next-sanity": "^9.8.57",
